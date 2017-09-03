@@ -1,0 +1,6 @@
+if(confirm('Are you sure?')) {
+  $("#post_<%= @post.id %>").fadeOut(500, function(){
+  	$(this).remove();
+  });
+
+}

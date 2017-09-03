@@ -1,0 +1,9 @@
+$('#notice').text('Status changed successfully');
+$("#myupdatepost_<%= @post.id %>").modal('hide');
+
+$("#post_<%= @post.id %>").fadeOut(500, function(){
+
+	$(this).remove();
+	$("#container_posts").append('<%= j render @post %>');
+
+});
